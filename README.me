@@ -1,0 +1,82 @@
+# DATA Structure Project 5
+## Binary Tree - Create family tree
+
+Write a complete program, using the node representation of binary trees
+(the nodes can be implemented using either an array or dynamic storage,
+your choice) to do the following...
+
+The program will read in a set of data representing a family tree. It will
+implement this as a binary tree in Pascal, then it will answer a series of questions
+about the family tree.
+
+Here is an outline of what the program will do:
+
+First, it will do whatever initializations (if any) are necessary.
+
+Then it will read in a set of data representing a family tree. The format of the
+data is described below. You should print the original data as it is read in.
+By hand, you should draw the original family tree in its usual form.
+
+The program will convert the data into a binary tree (this can be done as
+you are reading the data in). By hand you should draw the binary tree representing
+the original tree.
+
+Next the program will answer a series of questions about the tree. Possible questions
+are: Given a person p in the tree...
+
+1) Who is the father of p?
+2) Who are all the sons of p?
+3) Who are all the brothers of p?
+4) Who is the oldest brother of p?
+5) Who is the youngest brother of p?
+6) Who is the oldest son of p?
+7) Who is the youngest son of p?
+8) Who are the uncles of p?
+9) Who is the grandfather of p?
+
+Note: p can be any node in the tree, including the root or a leaf. The first thing to do is
+locate p in the tree (you might want to store some information along the way down to p).
+
+You should determine what the question is, then answer each question in a separate subprogram.
+(of course that subprogram may call other subprograms as well. Some of these may be shared).
+
+Note that the same question can be asked several times for a given tree, each time for a
+different node p. After you have answered a series of questions about this tree, you should
+start the process all over again for a different family tree. Start the output from each tree
+on a new page. Continue this for at least 5 family trees, including those given in class.
+
+Your program should be written in a modular style. Be sure that each subprogram has a very
+good comment explaining what it does. Be sure to specify any global variables that you
+might use.
+
+DATA: the set of data for each tree will look like this (you decide how to separate sets
+of data for different trees):
+
+a name (up to 10 characters) - This is the top node of the tree
+an integer n (possibly 0), representing the number of sons this node has
+
+Example:
+Jones   3  (The root Jones has 3 sons)
+Bob     2
+Dan     0
+Brian   1  (These are 3 sons of Jones)
+Richard 0
+Jake    1  (Two sons of Bob)
+Michael 1  (One son of Brian)
+Bill    0  (One son of Jake)
+Deville 0  (One son of Michael)
+
+Note: you can use a different format, as long as you explain clearly what your format is
+
+PATRICK SKELLEY FORMAT:
+Sons are always listed immediately below.
+
+Jones,3
+Bob,2 - son of Jones (1/3)
+Richard,0 - son of Bob (1/2)
+Jake,1 - son of Bob (2/2)
+Bill,0 - son of Jake (1/1)
+Dan,0 - son of Jones (2/3)
+Brian,1 - son of Jones (3/3)
+Michael,1 - son of Brian (1/1)
+DeVille,0 - son of Michael (1/1)
